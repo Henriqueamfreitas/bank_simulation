@@ -11,10 +11,13 @@ export function SummarySection( {transactionList, setTransactionList} ){
     return(
         <section>
             <h2>Resumo Financeiro</h2>
+            {transactionList.length > 0? (
             <ul>
                 {transactionList.map((transaction) => <TransactionCard key={transaction.id} transaction={transaction} 
                 removeTransactionFromList={removeTransactionFromList}/>)}
             </ul>
+            ) : <p>Você ainda não possui nenhum lançamento</p> }
         </section>
     )
 }
+
