@@ -16,7 +16,7 @@ function App() {
     <main>
       <Form setTransactionList={setTransactionList}></Form>
       <ValueSection transactionList={transactionList}></ValueSection>
-      <SummarySection transactionList={transactionList}></SummarySection>
+      <SummarySection transactionList={transactionList} setTransactionList={setTransactionList}></SummarySection>
     </main>
     </>
   )
