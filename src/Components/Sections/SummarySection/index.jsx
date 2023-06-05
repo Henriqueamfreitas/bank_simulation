@@ -1,5 +1,6 @@
 import { TransactionCard } from "./TransactionCard"
 import { v4 as uuidv4 } from "uuid";
+import { StyledSummarySection } from "./sumarySection";
 
 export function SummarySection( {transactionList, setTransactionList} ){
     function removeTransactionFromList(transactionId){
@@ -9,7 +10,7 @@ export function SummarySection( {transactionList, setTransactionList} ){
     }
     
     return(
-        <section>
+        <StyledSummarySection>
             <h2>Resumo Financeiro</h2>
             {transactionList.length > 0? (
             <ul>
@@ -17,7 +18,7 @@ export function SummarySection( {transactionList, setTransactionList} ){
                 removeTransactionFromList={removeTransactionFromList}/>)}
             </ul>
             ) : <p>Você ainda não possui nenhum lançamento</p> }
-        </section>
+        </StyledSummarySection>
     )
 }
 

@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
+import { StyledForm } from "./form";
+import { StyledLabel } from "./form";
+import { StyledInput } from "./form";
 
 export function Form( {setTransactionList} ){
     const [description, setDescription] = useState("")
@@ -25,9 +28,9 @@ export function Form( {setTransactionList} ){
     }
 
     return(
-        <form onSubmit={submit}>
-            <label>Descrição</label>
-            <input 
+        <StyledForm onSubmit={submit}>
+            <StyledLabel>Descrição</StyledLabel>
+            <StyledInput 
                 type="text" 
                 placeholder="Digite aqui sua descrição" 
                 value={description}
@@ -36,14 +39,15 @@ export function Form( {setTransactionList} ){
             />
             <p>Ex: Compra de roupas</p>
 
-            <label>Valor(R$)</label>
-            <input 
+            <StyledLabel>Valor(R$)</StyledLabel>
+            <StyledInput 
                 type="number" 
                 placeholder="Digite aqui o valor desejado"
                 value={value}
                 onChange={(event) => setValue(event.target.value)}
                 required
             />
+            <StyledLabel>Tipo de valor</StyledLabel>
             <select onChange={handleTypeChange} name="" id="" required>
                 <option value="">Selecione tipo da transação</option>
                 <option value="Entrada">Entrada</option>
@@ -51,6 +55,6 @@ export function Form( {setTransactionList} ){
             </select>
 
             <button type="submit">Inserir Valor</button>
-        </form>
+        </StyledForm>
     )
 }

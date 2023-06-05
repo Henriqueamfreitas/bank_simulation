@@ -1,3 +1,6 @@
+import { StyledValueSection } from "./valueSection";
+import { StyledP } from "./valueSection";
+
 export function ValueSection( {transactionList} ){
     const totalBalance = transactionList.reduce((accValue, transaction) => {
         console.log(typeof(transaction.value))
@@ -5,12 +8,12 @@ export function ValueSection( {transactionList} ){
     }, 0);
 
     return(
-        <section>
+        <StyledValueSection>
             <div>
                 <p>Valor total:</p>
-                <p>{totalBalance}</p>
+                <StyledP>{totalBalance}</StyledP>
             </div>
             <p>O valor se refere ao saldo</p>  
-        </section>
+        </StyledValueSection>
     )
 }
