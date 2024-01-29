@@ -1,19 +1,30 @@
-import { StyledValueSection } from "./valueSection";
-import { StyledP } from "./valueSection";
+import { StyledValueSection } from './valueSection';
+import { StyledP } from './valueSection';
+import { StyledParagraph2, StyledParagraph3 } from '../../../Styles/text';
 
 export function ValueSection( {transactionList} ){
-    const totalBalance = transactionList.reduce((accValue, transaction) => {
-        console.log(typeof(transaction.value))
-        return accValue + parseInt(transaction.value);
-    }, 0);
+    let entryValue = 0
+    let outflowValue = 0
+    if(transactionList.length > 0){
+        transactionList.forEach(element => {
+            if(element.type === 'Entrada'){
+                entryValue+=parseInt(element.value)
+            } else{
+                outflowValue+=parseInt(element.value)
+            }
+        });
+    }
+
+    const totalBalance = entryValue-outflowValue
+    const formatedTotalBalance = totalBalance.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
     return(
         <StyledValueSection>
             <div>
-                <p>Valor total:</p>
-                <StyledP>{totalBalance}</StyledP>
+                <StyledParagraph2>Valor total:</StyledParagraph2>
+                <StyledP>{formatedTotalBalance}</StyledP>
             </div>
-            <p>O valor se refere ao saldo</p>  
+            <StyledParagraph3>O valor se refere ao saldo</StyledParagraph3>  
         </StyledValueSection>
     )
 }
