@@ -16,6 +16,11 @@ export const StyledValueSection = styled.section`
         justify-content: space-between;
         margin-bottom: .375rem;
     }
+
+    @media (min-width: 43.75rem) {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
 `
 
 export const StyledP = styled.p`

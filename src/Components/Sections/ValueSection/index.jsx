@@ -1,6 +1,6 @@
 import { StyledValueSection } from './valueSection';
 import { StyledP } from './valueSection';
-import { StyledParagraph2, StyledParagraph3 } from '../../../Styles/text';
+import { StyledParagraph2, StyledParagraph3 } from '../../../styles/text.js';
 
 export function ValueSection( {transactionList} ){
     let entryValue = 0

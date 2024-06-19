@@ -1,10 +1,12 @@
 import logo from '../../Assets/Nu Kenzie.svg'
 import { StyledHeader } from './header'
+import { StyledSpan, StyledSpan2 } from '../../styles/text'
 
 export function Header(){
     return(
         <StyledHeader>
-            <img src={logo} alt='Logo da Nu kenzie - Nu em rosa e kenzie em cinza escuro' />
+            <StyledSpan>Bank</StyledSpan><StyledSpan2>Simulation</StyledSpan2>
+            {/* <img src={logo} alt='Logo da Nu kenzie - Nu em rosa e kenzie em cinza escuro' /> */}
         </StyledHeader>
     )
 }

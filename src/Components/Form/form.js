@@ -38,6 +38,10 @@ export const StyledForm = styled.form`
         border-radius: .5rem;
         height: 3rem;
     }
+    @media (min-width: 43.75rem) {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
 `
 export const StyledLabel = styled.label`
     margin-bottom: .75rem;

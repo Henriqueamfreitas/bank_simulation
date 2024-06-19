@@ -5,6 +5,7 @@ import { ValueSection } from '../src/Components/Sections/ValueSection/index.jsx'
 import { SummarySection } from '../src/Components/Sections/SummarySection/index.jsx'
 import { GlobalReset } from './styles/reset.js'
 import { StyledMain } from './styles/main.js'
+import { GlobalStyles } from './styles/global.js'
 
 function App() {
   const [transactionList, setTransactionList] = useState([])
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
     <GlobalReset></GlobalReset>
+    <GlobalStyles></GlobalStyles>
     <Header></Header>
     <StyledMain>
       <div>

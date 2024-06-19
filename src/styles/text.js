@@ -29,3 +29,17 @@ export const StyledParagraph3 = styled.p`
     font-weight: 400;
     font-family: var(--font-primary);
 `
+
+export const StyledSpan = styled.span`
+    font-size: 1.375rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+`
+
+export const StyledSpan2 = styled.span`
+    font-size: 1.375rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    color: var(--color-grey-4);
+`
