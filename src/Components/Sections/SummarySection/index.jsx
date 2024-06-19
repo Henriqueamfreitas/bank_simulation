@@ -1,7 +1,7 @@
 import { TransactionCard } from './TransactionCard'
 import { v4 as uuidv4 } from 'uuid';
 import { StyledSummarySection } from './sumarySection';
-import { StyledParagraph1, StyledTitle1 } from '../../../Styles/text';
+import { StyledParagraph1, StyledTitle1 } from '../../../../src/styles/text.js';
 
 
 export function SummarySection( {transactionList, setTransactionList} ){

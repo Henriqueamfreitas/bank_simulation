@@ -1,5 +1,5 @@
 import { StyledTransactionCard } from './transactionCard'
-import { StyledTitle2 } from '../../../../Styles/text';
+import { StyledTitle2 } from '../../../../../src/styles/text.js';
 
 export function TransactionCard( {transaction, removeTransactionFromList} ){
     const value = parseFloat(transaction.value)

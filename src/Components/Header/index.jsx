@@ -6,7 +6,6 @@ export function Header(){
     return(
         <StyledHeader>
             <StyledSpan>Bank</StyledSpan><StyledSpan2>Simulation</StyledSpan2>
-            {/* <img src={logo} alt='Logo da Nu kenzie - Nu em rosa e kenzie em cinza escuro' /> */}
         </StyledHeader>
     )
 }
